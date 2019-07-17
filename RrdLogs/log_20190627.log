@@ -1,0 +1,130 @@
+******2019-06-27 10:24:53,390 - redis client - BackendRedis.py,line 126 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-06-27 10:24:53,394 - redis client - BackendRedis.py,line 126 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-06-27 10:24:53,400 - redis client - BackendRedis.py,line 126 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-06-27 10:24:53,404 - redis client - BackendRedis.py,line 132 - INFO: None
+******2019-06-27 10:24:53,404 - redis client - BackendRedis.py,line 126 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7003}
+******2019-06-27 10:24:53,407 - redis client - BackendRedis.py,line 126 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7004}
+******2019-06-27 10:24:53,411 - redis client - BackendRedis.py,line 126 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7005}
+******2019-06-27 10:28:54,651 - redis client - BackendRedis.py,line 126 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-06-27 10:28:54,657 - redis client - BackendRedis.py,line 126 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-06-27 10:28:54,661 - redis client - BackendRedis.py,line 126 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-06-27 10:28:54,664 - redis client - BackendRedis.py,line 132 - INFO: None
+******2019-06-27 10:28:54,664 - redis client - BackendRedis.py,line 126 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7003}
+******2019-06-27 10:28:54,668 - redis client - BackendRedis.py,line 126 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7004}
+******2019-06-27 10:28:54,673 - redis client - BackendRedis.py,line 126 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7005}
+******2019-06-27 10:33:08,151 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-06-27 10:33:08,151 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-06-27 10:33:08,151 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-06-27 10:33:08,157 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-06-27 10:33:08,160 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-06-27 10:33:08,164 - redis client - BackendRedis.py,line 135 - INFO: None
+******2019-06-27 10:33:08,164 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7003}
+******2019-06-27 10:33:08,167 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7004}
+******2019-06-27 10:33:08,171 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): P2P-REDIS_MOBILE_CODE_REGISTER_OR_LOGIN_18500461011 from Redis: {'host': '172.16.4.83', 'port': 7005}
+******2019-06-27 10:33:08,174 - redis client - BackendRedis.py,line 114 - INFO: redis没有该数据或redis单点连接失败
+******2019-06-27 11:43:45,882 - change_activity_begintime - view.py,line 493 - INFO: node时间更新完成
+******2019-06-27 11:43:45,882 - change_activity_begintime - view.py,line 493 - INFO: node时间更新完成
+******2019-06-27 11:43:45,884 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-06-27 11:43:45,884 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-06-27 11:43:45,884 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-06-27 11:43:45,884 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-06-27 11:43:45,884 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-06-27 11:43:45,884 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-06-27 11:43:45,890 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-06-27 11:43:45,890 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-06-27 11:43:45,892 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-06-27 11:43:45,892 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-06-27 11:43:45,897 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7003}
+******2019-06-27 11:43:45,897 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7003}
+******2019-06-27 11:43:45,900 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7004}
+******2019-06-27 11:43:45,900 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7004}
+******2019-06-27 11:43:45,904 - redis client - BackendRedis.py,line 135 - INFO: None
+******2019-06-27 11:43:45,904 - redis client - BackendRedis.py,line 135 - INFO: None
+******2019-06-27 11:43:45,904 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7005}
+******2019-06-27 11:43:45,904 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7005}
+******2019-06-27 11:43:45,907 - redis client - BackendRedis.py,line 114 - INFO: redis没有该数据或redis单点连接失败
+******2019-06-27 11:43:45,907 - redis client - BackendRedis.py,line 114 - INFO: redis没有该数据或redis单点连接失败
+******2019-06-27 11:44:36,553 - change_activity_begintime - view.py,line 494 - INFO: node时间更新完成
+******2019-06-27 11:44:36,553 - change_activity_begintime - view.py,line 494 - INFO: node时间更新完成
+******2019-06-27 11:44:36,555 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-06-27 11:44:36,555 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-06-27 11:44:36,555 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-06-27 11:44:36,555 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-06-27 11:44:36,555 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-06-27 11:44:36,555 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-06-27 11:44:36,561 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-06-27 11:44:36,561 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-06-27 11:44:36,565 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-06-27 11:44:36,565 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-06-27 11:44:36,569 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7003}
+******2019-06-27 11:44:36,569 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7003}
+******2019-06-27 11:44:36,572 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7004}
+******2019-06-27 11:44:36,572 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7004}
+******2019-06-27 11:44:36,576 - redis client - BackendRedis.py,line 135 - INFO: None
+******2019-06-27 11:44:36,576 - redis client - BackendRedis.py,line 135 - INFO: None
+******2019-06-27 11:44:36,576 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7005}
+******2019-06-27 11:44:36,576 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7005}
+******2019-06-27 11:44:36,582 - redis client - BackendRedis.py,line 114 - INFO: redis没有该数据或redis单点连接失败
+******2019-06-27 11:44:36,582 - redis client - BackendRedis.py,line 114 - INFO: redis没有该数据或redis单点连接失败
+******2019-06-27 11:44:36,637 - change_activity_begintime - view.py,line 520 - INFO: 后端时间更新完成
+******2019-06-27 11:44:36,637 - change_activity_begintime - view.py,line 520 - INFO: 后端时间更新完成
+******2019-06-27 15:48:41,142 - change_activity_begintime - view.py,line 494 - INFO: node时间更新完成
+******2019-06-27 15:48:41,142 - change_activity_begintime - view.py,line 494 - INFO: node时间更新完成
+******2019-06-27 15:48:41,144 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-06-27 15:48:41,144 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-06-27 15:48:41,144 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-06-27 15:48:41,144 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-06-27 15:48:41,145 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-06-27 15:48:41,145 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-06-27 15:48:41,151 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-06-27 15:48:41,151 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-06-27 15:48:41,154 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-06-27 15:48:41,154 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-06-27 15:48:41,158 - redis client - BackendRedis.py,line 135 - INFO: None
+******2019-06-27 15:48:41,158 - redis client - BackendRedis.py,line 135 - INFO: None
+******2019-06-27 15:48:41,158 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7003}
+******2019-06-27 15:48:41,158 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7003}
+******2019-06-27 15:48:41,163 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7004}
+******2019-06-27 15:48:41,163 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7004}
+******2019-06-27 15:48:41,167 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7005}
+******2019-06-27 15:48:41,167 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7005}
+******2019-06-27 15:48:41,171 - redis client - BackendRedis.py,line 114 - INFO: redis没有该数据或redis单点连接失败
+******2019-06-27 15:48:41,171 - redis client - BackendRedis.py,line 114 - INFO: redis没有该数据或redis单点连接失败
+******2019-06-27 15:48:41,210 - change_activity_begintime - view.py,line 520 - INFO: 后端时间更新完成
+******2019-06-27 15:48:41,210 - change_activity_begintime - view.py,line 520 - INFO: 后端时间更新完成
+******2019-06-27 16:22:09,911 - change_activity_begintime - view.py,line 494 - INFO: node时间更新完成
+******2019-06-27 16:22:09,911 - change_activity_begintime - view.py,line 494 - INFO: node时间更新完成
+******2019-06-27 16:22:09,911 - change_activity_begintime - view.py,line 494 - INFO: node时间更新完成
+******2019-06-27 16:22:09,913 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-06-27 16:22:09,913 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-06-27 16:22:09,913 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-06-27 16:22:09,913 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-06-27 16:22:09,913 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-06-27 16:22:09,913 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-06-27 16:22:09,914 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-06-27 16:22:09,914 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-06-27 16:22:09,914 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-06-27 16:22:09,921 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-06-27 16:22:09,921 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-06-27 16:22:09,921 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-06-27 16:22:09,926 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-06-27 16:22:09,926 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-06-27 16:22:09,926 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-06-27 16:22:09,928 - redis client - BackendRedis.py,line 135 - INFO: None
+******2019-06-27 16:22:09,928 - redis client - BackendRedis.py,line 135 - INFO: None
+******2019-06-27 16:22:09,928 - redis client - BackendRedis.py,line 135 - INFO: None
+******2019-06-27 16:22:09,930 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7003}
+******2019-06-27 16:22:09,930 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7003}
+******2019-06-27 16:22:09,930 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7003}
+******2019-06-27 16:22:09,934 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7004}
+******2019-06-27 16:22:09,934 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7004}
+******2019-06-27 16:22:09,934 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7004}
+******2019-06-27 16:22:09,937 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7005}
+******2019-06-27 16:22:09,937 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7005}
+******2019-06-27 16:22:09,937 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_ from Redis: {'host': '172.16.4.83', 'port': 7005}
+******2019-06-27 16:22:09,940 - redis client - BackendRedis.py,line 114 - INFO: redis没有该数据或redis单点连接失败
+******2019-06-27 16:22:09,940 - redis client - BackendRedis.py,line 114 - INFO: redis没有该数据或redis单点连接失败
+******2019-06-27 16:22:09,940 - redis client - BackendRedis.py,line 114 - INFO: redis没有该数据或redis单点连接失败
+******2019-06-27 16:22:09,973 - change_activity_begintime - view.py,line 520 - INFO: 后端时间更新完成
+******2019-06-27 16:22:09,973 - change_activity_begintime - view.py,line 520 - INFO: 后端时间更新完成
+******2019-06-27 16:22:09,973 - change_activity_begintime - view.py,line 520 - INFO: 后端时间更新完成

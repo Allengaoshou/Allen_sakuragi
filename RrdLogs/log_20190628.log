@@ -1,0 +1,24 @@
+******2019-06-28 15:06:04,382 - change_activity_begintime - view.py,line 538 - INFO: node时间更新完成
+******2019-06-28 15:06:04,382 - change_activity_begintime - view.py,line 538 - INFO: node时间更新完成
+******2019-06-28 15:06:04,384 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-06-28 15:06:04,384 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-06-28 15:06:04,384 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-06-28 15:06:04,384 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-06-28 15:06:04,384 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_411 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-06-28 15:06:04,384 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_411 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-06-28 15:06:04,394 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_411 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-06-28 15:06:04,394 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_411 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-06-28 15:06:04,398 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_411 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-06-28 15:06:04,398 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_411 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-06-28 15:06:04,403 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_411 from Redis: {'host': '172.16.4.83', 'port': 7003}
+******2019-06-28 15:06:04,403 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_411 from Redis: {'host': '172.16.4.83', 'port': 7003}
+******2019-06-28 15:06:04,407 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_411 from Redis: {'host': '172.16.4.83', 'port': 7004}
+******2019-06-28 15:06:04,407 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_411 from Redis: {'host': '172.16.4.83', 'port': 7004}
+******2019-06-28 15:06:04,410 - redis client - BackendRedis.py,line 135 - INFO: None
+******2019-06-28 15:06:04,410 - redis client - BackendRedis.py,line 135 - INFO: None
+******2019-06-28 15:06:04,411 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_411 from Redis: {'host': '172.16.4.83', 'port': 7005}
+******2019-06-28 15:06:04,411 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_411 from Redis: {'host': '172.16.4.83', 'port': 7005}
+******2019-06-28 15:06:04,414 - redis client - BackendRedis.py,line 114 - INFO: redis没有该数据或redis单点连接失败
+******2019-06-28 15:06:04,414 - redis client - BackendRedis.py,line 114 - INFO: redis没有该数据或redis单点连接失败
+******2019-06-28 15:06:04,457 - change_activity_begintime - view.py,line 564 - INFO: 后端时间更新完成
+******2019-06-28 15:06:04,457 - change_activity_begintime - view.py,line 564 - INFO: 后端时间更新完成

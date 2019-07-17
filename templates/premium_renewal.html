@@ -1,0 +1,220 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<!-- dialog（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="close_img" type="button" class="close"  aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">模板参数配置</h4>
+            </div>
+            <div class="modal-body" id="jsoneditor"  ><input type="button" id='btn' value='按钮'>
+</div>
+            <div class="modal-footer">
+                <!--<button id="close" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>-->
+                                <button id="close" type="button" class="btn btn-default" >关闭</button>
+
+                <button type="button" class="btn btn-primary">提交更改</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+
+<div class="container">
+	<div class="page-header">
+		<div class="row">
+		    <div class="col-md-3"></div>
+		    <div class="col-md-6">
+	    		<div class="list-group">
+				<a class="list-group-item active">
+				    <h4 class="list-group-item-heading">Premium_Renewal</h4>
+				</a>
+		 		</div>
+
+		 		{% if error %}
+				<p class=error><strong>Error:</strong> {{ error }}</p>
+				  {% endif %}
+		      <form action="{{ url_for('premium_renewal') }}" method="post">
+		        <div class="form-group">
+		          <label for="phonenum">phone</label>
+		          <input type="text" class="form-control" name="phonenum" id="phonenum" placeholder="phonenum">
+		        </div>
+				<div class="form-group">
+		          <label for="amount">amount</label>
+		          <input type="text" class="form-control" name="amount" id="amount" placeholder="Amount of purchase">
+		        </div>
+                <div class="form-group">
+		          <label for="advanced_days">advanced days</label>
+		          <input type="text" class="form-control" name="advanced_days" id="advanced_days" placeholder="advanced_days">
+		        </div>
+		        <button  type="submit" class="btn btn-primary btn-lg">提交</button>
+                <button type="button" id="template_editer" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal">参数模板</button>
+		      </form>
+		    </div>
+		    <div class="col-md-3"></div>
+		  </div>
+	</div>
+</div>
+
+
+
+<!--<div class="list-group-item active" id="jsoneditor"  style="display: none; height: auto; width: 700px; top: 0px; left: 333px;  z-index: 101;"><input type="button" id='btn' value='按钮'><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+<!--</div>-->
+
+    <script>
+    $("#close, #close_img").bind("click", function() {
+        $('#myModal').modal('hide')
+    });
+    </script>
+
+    <script>
+        document.getElementById('template_editer').onclick = function(){
+    document.getElementById('jsoneditor').style.display="";
+    };
+    </script>
+    <script src="{{ url_for('static', filename='js/index.js', _external=True )}}"></script>
+    <script>
+        // create the editor
+        var container = document.getElementById("jsoneditor");
+        var options = {templates: [
+        {
+            text: 'Person',
+            title: 'Insert a Person Node',
+            className: 'jsoneditor-type-object',
+            field: 'PersonTemplate',
+            value: {
+                'firstName': 'John',
+                'lastName': 'Do',
+                'age': 28
+            }
+        },
+        {
+            text: 'Address',
+            title: 'Insert a Address Node',
+            field: 'AddressTemplate',
+            value: {
+                'street': "",
+                'city': "",
+                'state': "",
+                'ZIP code': ""
+            }
+        }
+    ]};
+        var editor = new JSONEditor(container, {
+            mode: 'code'
+        });
+
+        // set json
+        var json = {
+            "Array": [1, 2, 3],
+            "Boolean": true,
+            "Null": null,
+            "Number": 123,
+            "Object": {"a": "b", "c": "d"},
+            "String": "Hello World"
+        };
+        editor.set(json)
+        editor.set(options);
+
+        // get json
+
+        document.getElementById('btn').onclick=function(){
+            var json = editor.get();
+            console.log(json)
+        }
+    </script>
+
+
+
+
+<!--<form id="t">-->
+    <!--<table id="table" style="width:100%;height:10%;table-layout:fixed;" class="nui-form-table">-->
+        <!--<tr>-->
+            <!--<td width="10%"></td>-->
+            <!--<td width="10%">-->
+                <!--<label id="testkey">参数1</label>-->
+                <!--<input type="text" id="<%=test_input %>" style="display: none"><input id ='textbox' type='button' value='设置label内容' onclick="fun()"/>-->
+            <!--</td>-->
+            <!--<td width="10%"><input type="text"  name="xws.qs1" required="true" maxlength="30" style=""/></td>-->
+            <!--<td width="10%"></td>-->
+            <!--&lt;!&ndash;<td width="10%">&ndash;&gt;-->
+                <!--&lt;!&ndash;<label>交易单元1</label>&ndash;&gt;-->
+            <!--&lt;!&ndash;</td>&ndash;&gt;-->
+            <!--&lt;!&ndash;<td width="25%"><input type="text"  name="xws.qs1" required="true" maxlength="30" style="width:100%"/></td>&ndash;&gt;-->
+            <!--<td width="10%">-->
+                <!--<input type="button" id="new" value="新增" />-->
+            <!--</td>-->
+        <!--</tr>-->
+    <!--</table>-->
+            <!--<input type="button" id="btn" value="显示" />-->
+<!--</form><br>-->
+<!--<script type="text/javascript">-->
+    <!--var rowWhere=1;-->
+
+    <!--document.getElementById('new').onclick = function() {-->
+        <!--var table =document.getElementById("table");-->
+        <!--var rows = table.rows.length+1;　　　　//new部分控件-->
+        <!--var input1 = document.createElement('input');-->
+        <!--var label1 = document.createElement('label');-->
+        <!--var input2 = document.createElement('input');-->
+        <!--var input3 = document.createElement('input');-->
+<!--　　　　　　//这里是将新列插在指定的位置，0代表第一列-->
+        <!--var tr = table.insertRow(rowWhere);-->
+        <!--rowWhere=rowWhere+1;-->
+        <!--var td1 = document.createElement('td');-->
+        <!--var td2 = document.createElement('td');-->
+        <!--var td3 = document.createElement('td');-->
+        <!--var td4 = document.createElement('td');-->
+<!--　　　　　　//添加各个属性-->
+        <!--label1.innerHTML = "参数"+rows;-->
+        <!--label1.id = "testkey"+rows;-->
+        <!--input1.id="xws.qs"+rows;-->
+        <!--input1.setAttribute("name","xws.qs"+rows);-->
+        <!--input1.setAttribute("autocomplete","off");-->
+        <!--input1.setAttribute("maxlength","30");-->
+        <!--input1.setAttribute("placeholder","");-->
+        <!--input1.setAttribute("class", "input1");-->
+
+        <!--input2.id="test_input"+rows;-->
+        <!--input2.setAttribute("name","test_input"+rows);-->
+        <!--input2.setAttribute("style","display: none");-->
+        <!--input2.setAttribute("autocomplete","off");-->
+        <!--input2.setAttribute("maxlength","30");-->
+        <!--input2.setAttribute("placeholder","");-->
+        <!--input2.setAttribute("class", "input2");-->
+
+        <!--input3.id="textbox"+rows;-->
+        <!--input3.setAttribute("name","textbox"+rows);-->
+        <!--input3.setAttribute("type","button");-->
+        <!--input3.setAttribute("onclick","fun()");-->
+        <!--input3.setAttribute("value","设置label内容");-->
+
+        <!--td2.append(label1,input2,input3);-->
+        <!--// td2.appendChild(input2);-->
+        <!--td3.appendChild(input1);-->
+        <!--// td4.appendChild(input1);-->
+        <!--tr.appendChild(td1);-->
+        <!--tr.appendChild(td2);-->
+        <!--tr.appendChild(td3);-->
+        <!--// tr.appendChild(td4);-->
+    <!--};　　　//最开始的时候是隐藏的，需点击才显示控件　　　　/-->
+    <!--// document.getElementById('btn').onclick = function(){-->
+    <!--//     document.getElementById('table').style.display="";-->
+    <!--// };-->
+<!--</script>-->
+
+<!--<script>-->
+    <!--function fun(e){-->
+           <!--console.log(document.querySelectorAll(".input1, .input2"));-->
+        <!--document.getElementById('test_input').style.display="";-->
+    <!--str = document.getElementById('test_input').value;-->
+    <!--obj_label = document.getElementById('testkey');-->
+    <!--obj_label.innerHTML = str;-->
+<!--}-->
+<!--</script>-->
+
+{% endblock %}

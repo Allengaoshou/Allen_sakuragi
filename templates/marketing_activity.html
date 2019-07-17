@@ -1,0 +1,249 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<script>
+function allSelect(check_v, checkname)
+{
+    var v_item = document.getElementsByName(check_v);
+    var items = document.getElementsByName(checkname);
+    for (var i = 0; i < items.length; ++i)
+    {
+        if (v_item[0].checked)
+        {
+            items[i].checked = true;
+        }
+        else
+        {
+            items[i].checked = false;
+        }
+    }
+}
+
+function singleSelect2parent(check_v, checkname)
+{
+    var v_item = document.getElementsByName(check_v);
+    var items = document.getElementsByName(checkname);
+    var childStatus = true;
+    for (var i = 0; i < items.length; ++i)
+    {
+        childStatus = (childStatus && items[i].checked);
+    }
+    if (childStatus)
+    {
+        v_item[0].checked = true;
+    }
+    else
+    {
+        v_item[0].checked = false;
+    }
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+    function getService(){
+$('#coupon_select').change(function(){
+            var strvalue=$("#coupon_select").val();
+            // var data = {'text': "success for ajax"} // data to send to server.
+
+             $.ajax({
+                // url: 'http://10.205.21.26:8080/js_call',
+				url: 'http://127.0.0.1:5000/marketing_activity_winningrate',
+                type: 'POST',
+                data: strvalue,
+                dataType: 'json',
+                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                beforeSend:function(){
+                $(".loading-box").show();
+                },
+                complete:function(){
+                $(".loading-box").hide();
+                },
+                success: function (res) {
+
+                    $(this).val(""); //清空上次input框里的数据
+                    $('#coupon_winningrate').val(res);
+                    // console.log(res)
+					// alert((JSON.stringify(res)).substring(0))
+                    // console.log(0)
+                },
+
+                error: function (res) {
+                    // alert((JSON.stringify(res)).split(','))
+                    console.log(res);
+                    console.log(1)
+                }
+
+            })
+        });
+}
+</script>
+
+
+
+
+<div class="container">
+	<div class="page-header">
+		<div class="row">
+		    <div class="col-md-3"></div>
+		    <div class="col-md-6">
+	    		<div class="list-group">
+				<div class="list-group-item active">
+                    <!--<label class="list-group-item-heading">投资类型<input type="checkbox" name="checkbox_v2" style=" margin: -2px 5px 0 0;line-height: 20px;" value="version2" onclick="allSelect('checkbox_v2', 'checkbox2')" ></lable>-->
+				    <!--<h4 class="list-group-item-heading">投资类型</h4>-->
+
+                    <form action="{{ url_for('change_activity_begintime') }}" method="post">
+                     <div class="form-group">
+
+		          <input type="text" class="form-control" style="width: 200px;float: left;overflow: hidden" name="title" id="title" placeholder="手机号">
+
+		          <input type="text" class="form-control" style="width: 200px;margin-left: 310px"name="activityid" id="activityid" placeholder="活动ID">
+		        </div>
+                        <!--<label class="list-group-item-heading">投资类型<input type="checkbox" name="checkbox_v2" style=" margin: -2px 5px 0 0;line-height: 20px;" value="version2" onclick="allSelect('checkbox_v2', 'checkbox2')" ></lable>-->
+                        <label class="list-group-item-heading">投资类型</lable>
+
+                    <div class="list-group-item active" style="border-color: #41683b">
+
+                        <!--<label>-->
+                            <!--<input type="checkbox" name="checkbox2"  onclick="singleSelect2parent('checkbox_v2', 'checkbox2')" style="margin: -2px 5px 0 0;line-height: 20px;" value="U计划（含追加）"/>U计划（含追加）-->
+                        <!--</label>-->
+                                                <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"  style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;"value="U1"/>U1
+                        </label>
+                                            <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"  style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;" value="U3"/>U3
+                        </label>
+                        <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"  style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;" value="U6"  />U6
+                        </label>
+                        <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"   style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;" value="U12" checked />U12
+                        </label>
+                                            <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"   style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;" value="U24" checked/>U24
+                        </label>
+                                            <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"   style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;"  value="U36" checked/>U36
+                        </label>
+
+                        <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2" style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;" value="U计划续期"/>U计划续期
+                        </label>
+                        <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"  style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;" value="优选（含追加）"checked />优选（含追加）
+                        </label>
+                        <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"  style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;"  value="优选转投" checked />优选转投
+                        </label>
+                        <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"  style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;" value="薪计划" checked/>薪计划
+                        </label>
+
+
+
+
+                   <a> <input class="btn button orange" style="min-height: 20px;width: 60px; font-size: 12px " type="submit" id ="tijiao" name="investtype"></a>
+                    </div>
+                </form>
+                <!--</a>-->
+		 		</div>
+
+		 		{% if error %}
+                <p class=error><strong>Error:</strong> {{ error }}</p>
+				  {% endif %}
+
+
+		      <!--<form action="{{ url_for('addlink') }}" method="post">-->
+		        <!--<div class="form-group">-->
+		          <!--<label for="link_name">link_name</label>-->
+		          <!--<input type="text" class="form-control" name="link_name" id="link_name" placeholder="linkname">-->
+		        <!--</div>-->
+				<!--<div class="form-group">-->
+		          <!--<label for="link_address">link_address</label>-->
+		          <!--<input type="text" class="form-control" name="link_address" id="link_address" placeholder="routeaddress or ethernetaddress">-->
+		        <!--</div>-->
+                <!--<div class="form-group">-->
+		          <!--<label for="link_belong_service">link_belong_service</label>-->
+		          <!--<input type="text" class="form-control" name="link_belong_service" id="link_belong_service" placeholder="UI/user/loan/plan/pay/repay">-->
+		        <!--</div>-->
+		        <!--<button type="submit" class="btn btn-primary btn-lg">Add</button>-->
+		      <!--</form>-->
+		    </div>
+
+
+                    <div class="list-group-item active" >
+                     <form type="hidden" action="{{ url_for('marketing_activity') }}" method="post">
+                     <div >
+                              <!--<label class="padding:0;margin:0 5px 0 0; line-height: 10px;min-height: 10px;"><input type="checkbox" name="库存开关"  style="margin-left:400px;margin-right: 0px; line-height: 20px;" value="storage" checked />勾选库存充足</label>-->
+
+                                    <label class="padding:0;margin:0 15px 0 0; line-height: 20px;float: left;min-height: 20px;">现金奖
+                                   <select class="form-control" id="num_select" style="width: 200px;margin-right: 300px;margin-top:10px; overflow: hidden" name="cash" >
+                                        <option value='-1' style='display: none'></option>
+                                        <option value="0.18元">0.18元</option>
+                                        <option value="0.58元">0.58元</option>
+                                        <option value="1.88元">1.88元</option>
+                                    </select>
+                                        <input type="text" class="form-control" style=" width: 200px;margin-right: -600px;margin-top:10px;"name="title" id="title" placeholder="中奖率">
+
+                                    </label>
+
+
+                                     <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">优惠券奖
+                                    <select onclick="getService()" class="form-control" id="coupon_select" style="width: 200px ; margin-right: 300px; margin-top:10px;  overflow: hidden" name="coupon" >
+                                            <!--{% if jinlist %}-->
+
+                                              {% for jin in jinlist %}
+                                                   <option value="{{jin}}">{{jin}}</option>
+                                              {% endfor %}
+
+                                            <!--{% else %}-->
+                                                <!--<option value='-1' style='display: none'></option>-->
+
+                                            <!--{% endif %}-->
+                                    </select>
+                                        <input type="text" class="form-control" style=" width: 200px;margin-right: -600px;margin-top:10px;"name="coupon_winningrate" id="coupon_winningrate" value="" placeholder="中奖率" >
+                                        </label>
+
+                                        <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">实物奖
+                                    <select class="form-control" id="num_select" style="width: 200px ; margin-right: 300px; margin-top:10px;  overflow: hidden" name="matter" >
+                                        <option value='-1' style='display: none'></option>
+                                        <option value="定制背包">定制背包</option>
+                                        <option value="定制杯子">定制杯子</option>
+                                        <option value="定制笔记本">定制笔记本</option>
+                                        <input type="text" class="form-control" style=" width: 200px;margin-right: -600px;margin-top:10px;"name="matter" id="matter" placeholder="当前中奖率">
+                                    </select>
+                                        </label>
+
+                                        <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">积分奖
+                                    <select class="form-control" id="num_select" style="width: 200px ;margin-right: 300px; margin-top:10px;  overflow: hidden" name="score" >
+                                        <option value='-1' style='display: none'></option>
+                                        <option value="6积分">6积分</option>
+                                        <option value="66积分">66积分</option>
+                                        <option value="666积分">666积分</option>
+                                        <input type="text" class="form-control" style=" width: 200px;margin-right: -600px;margin-top:10px;"name="score" id="score" placeholder="当前中奖率">
+                                    </select>
+                                        </label>
+
+
+
+
+                     </div>
+                     </form>
+                    </div>
+
+		    <div class="col-md-3"></div>
+		  </div>
+	</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,284 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+<script type="text/javascript">
+$(function(){
+
+	//导航菜单
+    var ytx={};
+	$('[t_nav]').hover(function(){
+		var _nav = $(this).attr('t_nav');
+		clearTimeout( ytx[ _nav + '_timer' ] );
+		ytx[ _nav + '_timer' ] = setTimeout(function(){
+			$('#'+_nav).stop(true,true).slideDown(200);
+		}, 150);
+	},function(){
+		var _nav = $(this).attr('t_nav');
+		clearTimeout( ytx[ _nav + '_timer' ] );
+		ytx[ _nav + '_timer' ] = setTimeout(function(){
+			$('#'+_nav).stop(true,true).slideUp(200);
+		}, 150);
+	});
+
+	//导航绿色标题高度处理
+	$(".submenu dl").each(function(){
+		var dl_h = $(this).height();
+		$(this).find("dt").height(dl_h);
+	})
+
+	//首页短信、im、语音、视频动画效果
+	$(".box1 ul li").hover(function(){
+		$(this).find(".unhover").find("i").animate({bottom:-145,opacity: '0'},500);
+		$(this).find(".unhover").find(".txt").animate({left:-125,opacity: '0'},500);
+		$(this).find(".hover").show().find("i").animate({top:0},500);
+		$(this).find(".hover").show().find(".txt").animate({right:0},500);
+	},function(){
+		$(this).find(".unhover").find("i").animate({bottom:0,opacity: '1'},500);
+		$(this).find(".unhover").find(".txt").animate({left:0,opacity: '1'},500);
+		$(this).find(".hover").find("i").animate({top:-125},500);
+		$(this).find(".hover").find(".txt").animate({right:-110},500);
+	})
+
+	//首页“简单”、“可靠”、“专注”、“全球”动画效果
+	var current = $(".index_2 span.txt.current").index();
+	$(".index_2 span.txt").not(".current").hover(function(){
+		var span_index = $(this).index();
+		$(this).addClass("current");
+		$(".txt_desc").find("span").eq(span_index).fadeIn(800).siblings("span").fadeOut(800);
+	},function(){
+		var span_index = $(this).index();
+		$(this).removeClass("current");
+		$(".txt_desc").find("span").eq(span_index).fadeOut(800).siblings("span").eq(current).fadeIn(800);
+	})
+
+
+	//首页客户图标鼠标放上去状态变化
+	$(".index_4 ul li").hover(function(){
+		var img_src = $(this).find("img").attr("src");
+		var img_name = img_src.substring(7).replace(".png","");
+		//alert(img_name);
+		$(this).find("img").attr("src","/front/"+img_name+"_hover.png");
+	},function(){
+		var img_src = $(this).find("img").attr("src");
+		var img_name = img_src.substring(7).replace("_hover.png","");
+		$(this).find("img").attr("src","/front/"+img_name+".png");
+	})
+
+	//语音通知手风琴效果
+	$(".voice_2 ul li").each(function(){
+		var fold = $(this).find(".fold");
+		var unfold = $(this).find(".unfold");
+		if(fold.is(":hidden")){
+			$(this).width(680);
+		}else{
+			$(this).width(100);
+		}
+	})
+
+	$(".voice_2 ul li").click(function(){
+		var li_index = $(this).index();
+		$(this).animate({width:680},200);
+		$(this).find(".unfold").show();
+		$(this).find(".fold").hide();
+		$(this).siblings().animate({width:100},200);
+		$(this).siblings().find(".unfold").hide();
+		$(this).siblings().find(".fold").show();
+	})
+
+	//下拉框处理
+	$("div.select_box ul li:even").css("background","#f5f5f5");
+
+	$("div.select_box").click(function(e){
+		if("readonly" == $(this).attr('readonly')){
+			return false;
+		}
+		e.stopPropagation();
+		$(this).children("ul").toggle();
+		$(this).toggleClass("focus");
+	});
+
+})
+</script>
+
+
+<!--<a class="btn button orange" style="min-height: 20px;width: 60px; font-size: 12px " href="{{ url_for ('ui_report') }}">ADD</a>-->
+
+<div class="container" style="width: 1200px " >
+	<div class="page-header" >
+
+		<div class="list-group">
+			<!--<a class="list-group-item active">-->
+			    <!--<h4 class="list-group-item-heading">Case-list</h4>-->
+			<!--</a>-->
+			<div class="item_box box10">
+				<div class="item_box_wp">
+					<div class="voice_2">
+						<ul>
+							<li class="li1" id="li1">
+								<div class="fold" style="display:none;">
+									<!--<span class="img"></span>-->
+									<span class="txt">UI自动化客户端</span>
+								</div>
+								<div class="unfold" style="display:block">
+									<dl>
+										<!--<dt><img src="images/img10.png" /></dt>-->
+										<dd>
+											<b>UI自动化客户端<a href="/my_duty">查看详情>></a> </b>
+										</dd>
+										<dd>通过UI自动化脚本执行，动态回归各个主服务的主要功能、实时监测人人贷主站，收集测试环境及最新各项服务反馈. &nbsp;&nbsp;&nbsp;&nbsp; <a class="btn button orange skew" name="UI" href="{{ url_for ('addlink') }}" style="min-height: 25px;width: 40px;font-size: 12px;text-align: center;">✚</a></dd>
+										<dd style="margin-top: 4px;overflow: hidden;font-size: 14px ">
+											<a class="btn button {{disabled}} skew " name="UI"  href="{{ url_for ('ui_report') }}" target="_blank" style="min-height: 25px;width: 40%; float: left;overflow: hidden;margin-right: 60px;font-size: 18px">查看报告</a>
+											{% if links_toUI %}
+											{% for link in links_toUI %}
+											<a class="btn button {{disabled}} skew " name="UI" href="https://www.baidu.com" target="_blank" style="min-height: 25px;width: 40%; float: left;overflow: hidden;margin-right: 60px;font-size: 18px">{{link.link_name}}</a>
+											{% endfor %}
+											{% endif%}
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li class="li2">
+								<div class="fold">
+									<!--<span class="img"></span>-->
+									<span class="txt">登录注册开户绑卡</span>
+								</div>
+								<div class="unfold">
+									<dl>
+										<!--<dt><img src="images/img42.png" /></dt>-->
+										<dd>
+											<b>登录注册开户绑卡<a href="...">查看接口文档>></a></b>
+										</dd>
+										<dd>用户中心涉及登录注册、开户绑卡、解绑销户之数据构造中心 &nbsp;&nbsp;&nbsp;&nbsp; <a class="btn button orange" name="UI" href="{{ url_for ('addlink') }}" style="min-height: 25px;width: 40px;font-size: 12px;text-align: center;">✚</a></dd>
+										<dd style="margin-top: 10px;overflow: hidden;font-size: 14px">
+											{% if links_touser %}
+											{% for link in links_touser %}
+											<!--<a class="card_link">{{link.link_name}}</a>-->
+											<a class="card_link btn button blue skew " name="UI" href={{link.link_address}} style="...">{{link.link_name}}</a>
+											{% endfor %}
+											{% endif%}
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li class="li3">
+								<div class="fold">
+									<!--<span class="img"></span>-->
+									<span class="txt">U享优选薪计划</span>
+								</div>
+								<div class="unfold">
+									<dl>
+										<!--<dt><img src="images/img49.png" /></dt>-->
+										<dd>
+											<b>U享优选薪计划<a href="...">查看接口文档>></a></b>
+										</dd>
+										<dd>Plan中心包含优选、老优选、U享、薪享之数据构造中心 </dd>
+											<dd style="margin-top: 10px;overflow: hidden;font-size: 14px">
+											{% if links_toplan %}
+											{% for link in links_toplan %}
+											<a class="card_link btn button green skew " name="UI" href="{{ link.link_address}}" style="...">{{link.link_name}}</a>
+											{% endfor %}
+											{% endif%}
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li class="li4">
+								<div class="fold">
+									<!--<span class="img"></span>-->
+									<span class="txt">散标债权</span>
+								</div>
+								<div class="unfold">
+									<dl>
+										<!--<dt><img src="images/img50.png" /></dt>-->
+										<dd>
+											<b>散标债权<a href="...">查看接口文档>></a></b>
+										</dd>
+										<dd>标的债权中心：包含散标、债权之数据构造 </dd>
+											<dd style="margin-top: 10px;overflow: hidden;font-size: 14px">
+											{% if links_toloan %}
+											{% for link in links_toloan %}
+											<a class="card_link btn button green skew " name="UI" href="{{link.link_address}}" style="...">{{link.link_name}}</a>
+											{% endfor %}
+											{% endif%}
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li class="li5">
+								<div class="fold">
+									<!--<span class="img"></span>-->
+									<span class="txt">充值提现</span>
+								</div>
+								<div class="unfold">
+									<dl>
+										<!--<dt><img src="images/img51.png" /></dt>-->
+										<dd>
+											<b>充值提现<a href="...">查看接口文档>></a></b>
+										</dd>
+										<dd>支付中心对订单主流程的数据的校验快速通道</dd>
+											<dd style="margin-top: 10px;overflow: hidden;font-size: 14px">
+											{% if links_topay %}
+											{% for link in links_topay %}
+											<a class="card_link btn button orange skew" name="UI" href="{{ link.link_address }}" style="...">{{link.link_name}}</a>
+											{% endfor %}
+											{% endif%}
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li class="li6">
+								<div class="fold">
+									<!--<span class="img"></span>-->
+									<span class="txt">放款还款</span>
+								</div>
+								<div class="unfold">
+									<dl>
+										<!--<dt><img src="images/img52.png" /></dt>-->
+										<dd>
+											<b>放款还款<a href="...">查看接口文档>></a></b>
+										</dd>
+										<dd>repay中心包含对放款、还款数据的构造及完成基础数据校验流程</dd>
+											<dd style="margin-top: 10px;overflow: hidden;font-size: 14px">
+											{% if links_torepay %}
+											{% for link in links_torepay %}
+											<a class="card_link btn button pink skew " name="UI" href="{{ link.link_address }}" style="...">{{link.link_name}}</a>
+											{% endfor %}
+											{% endif%}
+										</dd>
+									</dl>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+	 	 </div>
+
+	</div>
+</div>
+  <nav class="navbar navbar-default navbar-fixed-bottom" style="font-size:16px;color:#fff; background-color: hsl(0, 0%, 75%);width: 1170px;margin:0 auto">
+    <div class="container">
+      		<div style="width: 150px ;height: 20px ;float: left;color: #fff" >
+              <a style ="color: #41683b" href="..." >Node数据服务✪</a>
+            </div>
+	  		<div class="card_link" style="width:80%; margin-top: 2px;margin-left: 20px;overflow: hidden;font-size: 12px;">
+				<a class="card_link" href="/marketing_activity" >marketing_activity</a>
+                <a class="card_link" href="/marketing_activity_withdraw" >marketing_activity_withdraw</a>
+                <a class="card_link" href="/marketing_activity/change_activity_begintime" >change_activity_begintime</a>
+                <a class="card_link" href="/marketing_activity" >marketing_activity</a>
+			</div>
+    </div>
+  </nav>
+{% endblock %}

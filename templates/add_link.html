@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+<div class="container">
+	<div class="page-header">
+		<div class="row">
+		    <div class="col-md-3"></div>
+		    <div class="col-md-6">
+	    		<div class="list-group">
+				<a class="list-group-item active">
+				    <h4 class="list-group-item-heading">Add Link</h4>
+				</a>
+		 		</div>
+
+		 		{% if error %}
+				<p class=error><strong>Error:</strong> {{ error }}</p>
+				  {% endif %}
+		      <form action="{{ url_for('addlink') }}" method="post">
+		        <div class="form-group">
+		          <label for="link_name">link_name</label>
+		          <input type="text" class="form-control" name="link_name" id="link_name" placeholder="linkname">
+		        </div>
+				<div class="form-group">
+		          <label for="link_address">link_address</label>
+		          <input type="text" class="form-control" name="link_address" id="link_address" placeholder="routeaddress or ethernetaddress">
+		        </div>
+                <div class="form-group">
+		          <label for="link_belong_service">link_belong_service</label>
+		          <input type="text" class="form-control" name="link_belong_service" id="link_belong_service" placeholder="UI/user/loan/plan/pay/repay">
+		        </div>
+		        <button type="submit" class="btn btn-primary btn-lg">Add</button>
+		      </form>
+		    </div>
+		    <div class="col-md-3"></div>
+		  </div>
+	</div>
+</div>
+
+
+{% endblock %}

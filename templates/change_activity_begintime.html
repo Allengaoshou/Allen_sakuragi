@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style type="text/css">
+   .submitinfo {
+       display: none;
+       width: 315px;
+       height: auto;
+       background:#FFFFDF;
+       border: 1px solid #333;
+       padding: 12px;
+       text-align: left;
+       position: absolute;
+       left: 500px;
+       top:50px;
+   }
+</style>
+
+<script type="text/javascript" language="javascript">
+    function display() {
+        document.getElementById("submitinfo").style.display = "block";
+    }
+    function disappear() {
+        document.getElementById("submitinfo").style.display = "none";
+    }
+</script>
+
+
+
+<div class="container">
+	<div class="page-header">
+		<div class="row">
+		    <div class="col-md-3"></div>
+		    <div class="col-md-6">
+
+
+                <div class="list-group">
+				<div class="list-group-item active">
+                    <!--<label class="list-group-item-heading">投资类型<input type="checkbox" name="checkbox_v2" style=" margin: -2px 5px 0 0;line-height: 20px;" value="version2" onclick="allSelect('checkbox_v2', 'checkbox2')" ></lable>-->
+				    <!--<h4 class="list-group-item-heading">投资类型</h4>-->
+
+                    <form action="{{ url_for('change_activity_begintime') }}" method="post">
+                     <div class="form-group">
+
+		          <input type="text" class="form-control" style="width: 50%;margin-left: 120px;float: left"name="activityid" id="activityid" placeholder="活动ID">
+		            </div>
+                   <a> <input onmouseover="display()" onmouseout="disappear()" class="btn button orange" style="min-height: 20px;width: 60px;margin-left: 30px; font-size: 12px " type="submit" id ="gg" name="gg"></a>
+                    <a  href="#home"   class="submitinfo" style="color: #00CCFF"  id ="submitinfo" name="submitinfo">Tips: 更改活动时间为当前时间后5分钟，请及时在积木更改配置 </a>
+                    </div>
+
+                    </form>
+                <!--</a>-->
+		 		</div>
+
+		 		{% if error %}
+                <p class=error><strong>Error:</strong> {{ error }}</p>
+				  {% endif %}
+
+		    </div>
+		    <div class="col-md-3"></div>
+		  </div>
+	</div>
+</div>
+
+
+{% endblock %}

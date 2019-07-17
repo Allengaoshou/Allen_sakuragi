@@ -1,0 +1,271 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container">
+	<div class="page-header">
+
+		<div class="list-group">
+			<a class="list-group-item active">
+			    <h4 class="list-group-item-heading">Case-list</h4>
+			</a>
+
+	 	 </div>
+
+	</div>
+</div>
+<div class="container">
+	<form class="form-inline">
+	  <div class="form-group">
+	    <label for="exampleInputEmail2">Suite</label>
+	    <select class="form-control" name="suite">
+	    	  {% if category_list %}
+
+              {% for category in category_list %}
+                   <option value="{{category.category_id}}">{{category.name}}</option>
+              {% endfor %}
+            {% endif %}
+		</select>
+	  </div>
+	  <button type="submit" class="btn button green" style="min-height: 30px;width: 80px; font-size: 12px " href="{{ url_for ('my_duty') }}">Search</button>
+	</form>
+	<a class="btn button orange" style="min-height: 20px;width: 60px; font-size: 12px " href="{{ url_for ('add_duty') }}">ADD</a><a class="btn button green" style="min-height: 20px;width: 120px; font-size: 12px "href="{{ url_for ('add_category') }}">Add Suite</a>
+	<button class="btn button pink" style="min-height: 20px;width: 60px; font-size: 12px " id="btn">clickme</button>
+</div>
+<div id="loading"></div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<button id="close" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>-->
+                <button id="close_img" type="button" class="close"  aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">模板参数配置</h4>
+            </div>
+            <div class="modal-body" id="jsoneditor"  ><input type="button" id='btn' value='按钮'>
+</div>
+            <div class="modal-footer">
+                <!--<button id="close" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>-->
+                                <button id="close" type="button" class="btn btn-default" >关闭</button>
+
+                <button id="update-info" type="button" class="btn btn-primary">提交更改</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+                <!--url: 'http://127.0.0.1:5000/js_call',-->
+<div class="loading-box">
+	 <div class="loading">
+		 <!--<div class="loading-text">-->
+			 <!--<h4>数据传输中，请稍后</h4>-->
+		 <!--</div>-->
+		 <div class="loading-img">
+			 <img src="/static/images/loading.gif">
+		 </div>
+		 <!--<div class="loading-tips">-->
+			 <!--<small>(小提示：ctrl+F5可以强制更新哦)</small>-->
+		 <!--</div>-->
+	 </div>
+</div>
+
+
+
+
+<div class="container">
+  		<table class=" table table-hover">
+            <nav aria-label="Page navigation" class="pull-right">
+            <ul class="pagination">
+                {{ html|safe }}
+            </ul>
+            </nav>
+  			<thead>
+  				<th class="active"><input type="checkbox" id="select_all"/>ID</th>
+  				<th class="active">Title</th>
+  				<th class="active">Suite</th>
+  				<th class="active">是否公开</th>
+  				<th class="active">是否完成</th>
+  				<th class="active">更新时间</th>
+				<th width="163px" class="active">操作</th>
+  			</thead>
+  			<tbody>
+  				{% if duty_list %}
+  				{% for duty in duty_list %}
+				<tr>
+				  <!--<td><input type="checkbox" name="testcase_{{duty.duty_id }}" value="{{ duty.duty_id }}"/></td>-->
+				  <td class="active"><input type="checkbox" name="testcase_{{duty.duty_id }}">{{duty.duty_id}}</td>
+				  <td class="success">{{duty.title}}</td>
+				  <td class="warning">{{duty.name}}</td>
+				  <td class="danger">{% if duty.is_show == 1 %}是{% else %}否{% endif %}</td>
+				  <td class="info">{% if duty.status == 1 %}是{% else %}否{% endif %}</td>
+				  <td class="info">{{duty.update_time}}</td>
+                    <!--<td  class="am-icon-plus-square-o am-icon-fw"  class="info">执行</td>-->
+					<td class="info">  <div style="float: left"> <button type="button" name="{{duty.duty_id}}" class="btn button glossy" style="min-height: 25px;width: 45px; font-size: 12px; text-align: center;" >执行</button>
+						<button type="button"  id="editbtn_{{duty.duty_id }}" name="{{duty.title}}" class="btn button glossy" style="min-height: 25px;width: 70px; font-size: 12px; text-align: center;" data-toggle="modal" data-target="#myModal" data-info="{{duty.duty_id }}" >参数设置</button>
+					</div>
+					</td>
+				</tr>
+                {% endfor %}
+				{% endif %}
+
+  			</tbody>
+
+		</table>
+
+
+
+</div>
+
+
+
+<!--<script>-->
+<!--$(function(){-->
+        <!--$("#btn").click(function() {-->
+
+            <!--var data = {'text': "success for ajax"} // data to send to server.-->
+
+             <!--$.ajax({-->
+                <!--url: 'http://10.205.21.26:8080/js_call',-->
+                <!--type: 'POST',-->
+                <!--data: data,-->
+                <!--dataType: 'json',-->
+                <!--beforeSend:function(){-->
+                <!--$(".loading-box").show();-->
+                <!--},-->
+                <!--complete:function(){-->
+                <!--$(".loading-box").hide();-->
+                <!--},-->
+                <!--success: function (res) {-->
+                    <!--console.log(res);-->
+					<!--// alert((JSON.stringify(res)).substring(0))-->
+                    <!--console.log(0)-->
+                <!--},-->
+
+                <!--error: function (res) {-->
+                    <!--// alert((JSON.stringify(res)).split(','))-->
+                    <!--console.log(res);-->
+                    <!--console.log(1)-->
+                <!--}-->
+
+            <!--})-->
+        <!--});-->
+<!--});-->
+<!--</script>-->
+
+<script src="{{ url_for('static', filename='js/index.js', _external=True )}}"></script>
+
+<script>
+
+	var container = document.getElementById("jsoneditor");
+	var editor = new JSONEditor(container, {
+            mode: 'code'
+        });
+
+	var table=document.getElementsByTagName('table')[0];
+	table.addEventListener('click',function(event){
+    console.log($(event.target).data("info"));
+
+	var duty_id = $(event.target).data("info");
+
+     $.ajax({
+         url: 'http://127.0.0.1:5000/case_info_ajax',
+         type: 'POST',
+         dataType: 'json',
+         data:{'duty_id':duty_id},
+         success: function (res) {
+             // if (json && json.success) {
+             console.log(res);
+
+            // $(this).val(""); //清空上次的数据
+            // $("#jsoneditor").val(res);
+            editor.set(res);
+
+            // alert((JSON.stringify(res)).substring(0))
+
+             }
+
+     });
+
+		// $(function(){
+        // $("#update-info").click(function() {
+
+            document.getElementById('update-info').onclick = function(){
+		var parm = JSON.stringify(editor.get()).substring(0); // data to send to server.
+
+             $.ajax({
+                url: 'http://127.0.0.1:5000/case_info_update_ajax',
+                type: 'POST',
+                data: {'duty_id':duty_id,'parameter':parm},
+                dataType: 'json',
+
+                success: function (res) {
+                    // console.log(res);
+					alert("提交成功");
+					window.location.reload();
+
+                },
+
+                error: function (res) {
+                    alert("更新失败");
+                    // console.log(res);
+                }
+
+            })
+        };
+        //
+        //
+         },false);
+
+</script>
+
+
+<!--<script>-->
+	<!--document.getElementById('editbtn').onclick = function(){-->
+<!--document.getElementById('jsoneditor').style.display="";-->
+<!--};-->
+<!--</script>-->
+<script>
+$("#close, #close_img").bind("click", function() {
+	$('#myModal').modal('hide')
+});
+</script>
+
+
+
+<!--<script>-->
+		<!--// Set the global default-->
+		<!--// JSONEditor.defaults.options.iconlib = "bootstrap2";-->
+		<!--// JSONEditor.defaults.options.theme = 'foundation5';-->
+        <!--// create the editor-->
+        <!--var container = document.getElementById("jsoneditor");-->
+        <!--var options = {};-->
+        <!--var editor = new JSONEditor(container, {-->
+            <!--mode: 'code'-->
+        <!--});-->
+
+
+        <!--// set json-->
+        <!--// var json = {};-->
+        <!--// var json = $("#jsoneditor").val();-->
+        <!--// editor.set(json);-->
+        <!--// editor.set(options);-->
+
+        <!--// get json-->
+
+        <!--document.getElementById('btn').onclick=function(){-->
+            <!--var json = editor.get();-->
+            <!--console.log(json)-->
+        <!--}-->
+    <!--</script>-->
+
+<!--<script>-->
+<!--$(function(){-->
+        <!--$("#update-info").click(function() {-->
+            <!---->
+        <!--}-->
+<!--});-->
+<!--</script>-->
+
+{% endblock %}
+
+

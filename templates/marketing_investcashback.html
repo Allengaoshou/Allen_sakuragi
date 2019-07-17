@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container">
+	<div class="page-header">
+		<div class="row">
+		    <div class="col-md-3"></div>
+		    <div class="col-md-6">
+
+				<div class="list-group-item active">
+                    <!--<label class="list-group-item-heading">投资类型<input type="checkbox" name="checkbox_v2" style=" margin: -2px 5px 0 0;line-height: 20px;" value="version2" onclick="allSelect('checkbox_v2', 'checkbox2')" ></lable>-->
+				    <!--<h4 class="list-group-item-heading">投资类型</h4>-->
+
+                    <form action="{{ url_for('marketing_investcashback') }}" method="post">
+                     <div class="form-group">
+
+		          <input type="text" class="form-control" style="width: 200px;float: left;overflow: hidden" name="title" id="title" placeholder="手机号">
+
+		          <input type="text" class="form-control" style="width: 200px;margin-left: 310px"name="activityid" id="activityid" placeholder="活动ID">
+		        </div>
+                        <!--<label class="list-group-item-heading">投资类型<input type="checkbox" name="checkbox_v2" style=" margin: -2px 5px 0 0;line-height: 20px;" value="version2" onclick="allSelect('checkbox_v2', 'checkbox2')" ></lable>-->
+                        <label class="list-group-item-heading">投资类型</lable>
+
+                    <div class="list-group-item active" style="border-color: #41683b">
+
+                        <!--<label>-->
+                            <!--<input type="checkbox" name="checkbox2"  onclick="singleSelect2parent('checkbox_v2', 'checkbox2')" style="margin: -2px 5px 0 0;line-height: 20px;" value="U计划（含追加）"/>U计划（含追加）-->
+                        <!--</label>-->
+                                                <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"  style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;"value="U1"/>U1
+                        </label>
+                                            <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"  style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;" value="U3"/>U3
+                        </label>
+                        <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"  style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;" value="U6"  />U6
+                        </label>
+                        <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"   style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;" value="U12" checked />U12
+                        </label>
+                                            <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"   style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;" value="U24" checked/>U24
+                        </label>
+                                            <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"   style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;"  value="U36" checked/>U36
+                        </label>
+
+                        <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2" style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;" value="U计划续期"/>U计划续期
+                        </label>
+                        <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"  style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;" value="优选（含追加）"checked />优选（含追加）
+                        </label>
+                        <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"  style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;"  value="优选转投" checked />优选转投
+                        </label>
+                        <label class="padding:0;margin:0 15px 0 0; line-height: 20px;min-height: 20px;">
+                            <input type="checkbox" name="checkbox2"  style="height:20px;width:20px;margin: -2px 5px 0 0;line-height: 20px;" value="薪计划" checked/>薪计划
+                        </label>
+
+
+                   <a> <input class="btn button orange" style="min-height: 20px;width: 60px; font-size: 12px " type="submit" id ="tijiao" name="investtype"></a>
+                    </div>
+                </form>
+                <!--</a>-->
+		 		</div>
+
+
+
+		 		{% if error %}
+                <p class=error><strong>Error:</strong> {{ error }}</p>
+				  {% endif %}
+
+		    </div>
+		    <div class="col-md-3"></div>
+		  </div>
+	</div>
+</div>
+
+
+{% endblock %}
