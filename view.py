@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from flask import render_template,url_for,request,flash,redirect,session,make_response
+from flask import render_template,url_for,request,flash,redirect,session,make_response,jsonify
 from utils.pagination import Pagination
 from utils.BackendRedis import RedisClient
 from utils.HttpParser import Client
 from dateutil.relativedelta import relativedelta
 from utils.RrdLogger import RrdLogger
-from case_manager import app,db
+from case_manager import app,db,YWCS_ENV_Config
 from model.User import User_
 from model.Local_db import Link_home,Category,Duty,User,Case_info
 from model.Marketing import Marketing_activity
@@ -235,9 +235,11 @@ def my_duty():
         myname = session['username']
         total_sql = 'select t1.*,t2.name from du_duty as t1  left join du_category as t2 on t2.category_id = t1.category_id where user_id = %s' % session['user_id']
         duty_list_all = db.session.execute(total_sql).fetchall()
+        totalcasenum = len(duty_list_all)
         if request.method == 'GET' and request.args.get('category_id'):
             category_id = request.args.get('category_id')
-            sql = 'select t1.*,t2.name from du_duty as t1  left join du_category as t2 on t2.category_id = t1.category_id where t1.user_id = %s  and t1.category_id = %s ' % (session['user_id'],category_id)
+            usercase_sql = 'select t1.*,t2.name from du_duty as t1  left join du_category as t2 on t2.category_id = t1.category_id where t1.user_id = %s  and t1.category_id = %s ' % (session['user_id'],category_id)
+            duty_list = db.session.execute(usercase_sql).fetchall()
             print(len(duty_list_all))
             li = []
             for i in range(1, len(duty_list_all) + 1):
@@ -255,8 +257,6 @@ def my_duty():
             pager_obj = Pagination(request.args.get("page", 1), len(li), request.path, request.args, per_page_count=3)
             page = int(int(request.args.get("page")) - 1)
             page_corresponding_num = int(page*3)
-            # print(request.path)
-            # print(request.args)
             index_list = li[pager_obj.start:pager_obj.end]
             a = [str(x) for x in index_list]
             # b = ",".join(a)
@@ -300,8 +300,8 @@ def my_duty():
                 ###search button 下逻辑
                 if request.args.get('suite') is not None:
                     category_id = request.args.get('suite')
-                    sql2 = 'select du_duty.*,du_category.name from du_duty  left join du_category on du_category.category_id = du_duty.category_id where du_duty.category_id = %s and du_duty.is_show = 1 ORDER BY du_duty.duty_id DESC ' % category_id
-                    duty_list1 = db.session.execute(sql2).fetchall()
+                    duty_list1 = db.session.execute(current_suite_sql).fetchall()
+
                     ###search 情况含page 参数
                     if request.args.get("page") is not None:
                         print("gg")
@@ -313,9 +313,9 @@ def my_duty():
                         page = int(int(request.args.get("page")) - 1)
                         page_corresponding_num1 = int(page * 3)
                         html = pager_obj.page_html()
-                        sql3 = 'select du_duty.*,du_category.name from du_duty  left join du_category on du_category.category_id = du_duty.category_id where du_duty.category_id = %s and du_duty.is_show = 1 ORDER BY du_duty.duty_id DESC limit %s,3' % (category_id,page_corresponding_num1)
+                        sql3 = 'select du_duty.*,du_category.name from du_duty  left join du_category on du_category.category_id = du_duty.category_id where du_duty.category_id = %s and du_duty.status = 1 ORDER BY du_duty.duty_id DESC limit %s,3' % (category_id,page_corresponding_num1)
                         duty_list3 = db.session.execute(sql3).fetchall()
-                        return render_template('my_duty.html', duty_list=duty_list3, category_list=category_list,myname=myname, html=html)
+                        return render_template('my_duty.html',totalcasenum=totalcasenum,duty_list=duty_list3, category_list=category_list,myname=myname, html=html)
                     ###search 情况不含page 参数
                     else:
                         ki = []
@@ -326,6 +326,7 @@ def my_duty():
                         # page = int(int(request.args.get("page")) - 1)
                         # page_corresponding_num1 = int(page * 3)
                         html = pager_obj.page_html()
+
                         sql3 = 'select du_duty.*,du_category.name from du_duty  left join du_category on du_category.category_id = du_duty.category_id where du_duty.category_id = %s and du_duty.is_show = 1 ORDER BY du_duty.duty_id DESC limit 3' % category_id
                         duty_list = db.session.execute(sql3).fetchall()
                         return render_template('my_duty.html', duty_list=duty_list, category_list=category_list,myname=myname, html=html)
@@ -335,7 +336,7 @@ def my_duty():
                     html = pager_obj.page_html()
                     sql1 = "select t1.*,t2.name from du_duty as t1  left join du_category as t2 on t2.category_id = t1.category_id where user_id =%s ORDER BY t1.duty_id DESC limit 3" % session['user_id']
                     duty_list = db.session.execute(sql1).fetchall()
-                    return render_template('my_duty.html', duty_list=duty_list, category_list=category_list,
+                    return render_template('my_duty.html', totalcasenum=totalcasenum,duty_list=duty_list, category_list=category_list,
                                            myname=myname, html=html)
         return render_template('my_duty.html',duty_list = duty_list,category_list=category_list,myname=myname,html=html)
 
@@ -362,6 +363,22 @@ def add_category():
                 return render_template('add_category.html')
 
         return render_template('add_category.html' ,username=session['username'],myname=myname)
+
+
+@app.route('/todolist', methods=['GET', 'POST'])
+def todolist():
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+    else:
+        print(session['user_id'])
+        myname = session['username']
+        sql3 = 'select title from du_duty  where user_id = %s and du_duty.status = 0 ORDER BY du_duty.duty_id DESC' % session['user_id']
+        todo_list = db.session.execute(sql3).fetchall()
+        print(todo_list)
+        if request.method == 'GET':
+            return render_template('todolist.html',todo_list=todo_list, myname=myname)
+        else:
+            return render_template('todolist.html')
 
 
 @app.route('/premium_renewal',methods=['GET', 'POST'])
@@ -527,7 +544,7 @@ def change_activity_begintime():
             redis_connect_port = redis_connect[1]
             # redisconn_three = redis.Redis(host='172.16.4.83', port=7003,socket_timeout=3)
             # redisconn_three.delete("MARKETING-ACTIVITY_ID_KEY_{}".format(activityId))
-            redisconn_four = redis.Redis(host='172.16.4.83', port=redis_connect_port,socket_timeout=3)
+            redisconn_four = redis.Redis(host='{}'.format(YWCS_ENV_Config.redisHost), port=redis_connect_port,socket_timeout=3)
             redisconn_four.delete("MARKETING-ACTIVITY_ID_KEY_{}".format(activityId))
             logger.info("del-redis finished")
             Marketing_activity.query.filter(Marketing_activity.activity_id == activityId).update(
@@ -654,7 +671,7 @@ def case_info_update_ajax():
 
     return parm
 
-#************ajax交互end***********************************************************************************
+#************ajax交互end*************************************************************************************
 # @app.route('/marketing_activity', methods=['POST','GET'])
 # def marketing_activity():
 #     # print("gg")
@@ -671,8 +688,27 @@ def case_info_update_ajax():
 #         else:
 #             return render_template('marketing_activity.html' ,myname=myname,jinlist=jinlist)
 
+#************API 数据start***********************************************************************************
+@app.route('/apidemo',methods=['POST','GET'])
+def apidemo():
+    user = request.args.get('user')
+    word = request.args.get('word')
+    print(user)
+    if user == 'api'and word == 'test':
+        result = {
+            "errcode": 0,
+            "errmsg": "success"
+        }
+        return jsonify(result)
+    else:
+        result = {
+            "errcode": -1,
+            "errmsg": "wrong user or word"
+        }
+        return jsonify(result)
 
 
+#************API 数据end*************************************************************************************
 
 
 # @app.route('/hello')

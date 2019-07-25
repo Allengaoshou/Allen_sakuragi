@@ -12,6 +12,8 @@
     <!--<script src="{{ url_for('static', filename='/js/jquery.min.js', _external=True )}}"></script>-->
     <script src="{{ url_for('static', filename='bootstrap/js/jquery.js', _external=True )}}"></script>
     <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.js', _external=True )}}"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/sweetalert/sweetalert.min.js', _external=True )}}"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap-select.js', _external=True )}}"></script>
     <!-- Bootstrap core CSS -->
 
   	<link href="{{ url_for('static', filename='bootstrap/css/bootstrap.css', _external=True )}}" rel="stylesheet">
@@ -20,7 +22,8 @@
     <link href="{{ url_for('static', filename='private_css/buttons.css', _external=True )}}" rel="stylesheet">
     <link href="{{ url_for('static', filename='private_css/base.css', _external=True )}}" rel="stylesheet">
     <link href="{{ url_for('static', filename='private_css/navstyle.css', _external=True )}}" rel="stylesheet">
-
+    <link href="{{ url_for('static', filename='bootstrap/css/sweetalert/sweetalert.css', _external=True )}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='bootstrap/css/bootstrap-select.min.css', _external=True )}}" rel="stylesheet">
 
 </head>
 <body>
@@ -35,12 +38,12 @@
 	<li class="photos"><a href="{{ url_for('home') }}" title="Photos"></a></li>
 	<li class="rssfeed"><a href="{{ url_for('my_duty') }}" title="Post"></a></li>
 	<li class="podcasts"><a href="{{ url_for('my_duty') }}" title="Podcasts"></a></li>
-	<li class="contact"><a href="{{ url_for('home') }}" title="Contact"></a></li>
+	<li class="messages"><a href="{{ url_for('todolist') }}" title="Messages"></a></li>
     </ul>
-
+    </div>
     <!-- Brand and toggle get grouped for better mobile display -->
       <a class="navbar-brand" href="/">BACKENDQA</a>
-    </div>
+
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         {% if myname is not none %}

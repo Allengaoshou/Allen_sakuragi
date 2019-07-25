@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <title>todoList</title>
+    <style>
+        #todoList {
+            list-style: none;
+            margin:10px 0px;
+            padding:0;
+            width:600px;
+        }
+        #todoList li {
+            margin-bottom:5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background:#f5f5f5;
+            position: relative;
+        }
+        input {
+            padding:10px;
+            font-size:16px;
+            border:1px solid #ccc;
+        }
+        button {
+            padding:10px 20px;
+            border:1px solid #ccc;
+            background: #f5f5f5;
+            outline: none;
+            cursor: pointer;
+        }
+
+        #todoList span {
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="content">
+    <button id="btn">添加</button>
+    {% if todo_list %}
+    {% for (todo,) in todo_list %}
+    <ul id="todoList">
+        <li>{{todo}} <span>&times;</span></li>
+    </ul>
+    {% endfor %}
+    {% endif%}
+
+    <script>
+        var input = document.querySelector('#content');
+        var btn = document.querySelector('#btn');
+        var todoList= document.querySelector('#todoList');
+        var spans = document.querySelectorAll('#todoList span');
+
+
+        btn.onclick = function(){
+            //获取 input的内置
+            var text = input.value;
+
+            //创建li元素 并给li元素添加包裹 内容
+            var li = document.createElement('li');
+            li.innerText = text;
+            var span = document.createElement('span');
+            span.innerHTML = '&times;';
+            li.appendChild(span);
+
+            //把li元素添加到ul中
+            todoList.appendChild(li);
+        }
+
+
+        /*spans.forEach(function(span){
+            span.onclick = function(){
+                todoList.removeChild(this.parentNode)
+            }
+        })*/
+
+        //委派方式绑定
+        todoList.onclick = function(event) {
+            if (event.target.nodeName === 'SPAN') {
+                this.removeChild(event.target.parentNode);
+            }
+        }
+    </script>
+
+
+{% endblock %}

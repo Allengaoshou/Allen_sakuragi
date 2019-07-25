@@ -1,0 +1,130 @@
+******2019-07-25 15:21:59,191 - change_activity_begintime - view.py,line 523 - INFO: node时间更新完成
+******2019-07-25 15:21:59,191 - change_activity_begintime - view.py,line 523 - INFO: node时间更新完成
+******2019-07-25 15:21:59,193 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-07-25 15:21:59,193 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-07-25 15:21:59,193 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-07-25 15:21:59,193 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-07-25 15:21:59,194 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-07-25 15:21:59,194 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-07-25 15:21:59,198 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-07-25 15:21:59,198 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-07-25 15:21:59,203 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-07-25 15:21:59,203 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-07-25 15:21:59,207 - redis client - BackendRedis.py,line 135 - INFO: {u'lastUpdateUser': u'gaozhenjie', u'activityName': u'\u6295\u8d44\u8fd4\u73b0\u6bcf\u65e5\u6392\u884c\u699c', u'activityFlag': 1, u'lastUpdataTime': 1563881442000L, u'activityType': 1, u'id': 464, u'activityId': u'445', u'beginTime': 1563033600000L, u'createUser': u'gaozhenjie', u'lockPeriod': u'12,24,36', u'endTime': 1564588799000L, u'allowBusinessCategory': u'UPLAN,U_NEW,U_PLAN_RENEWAL,U_PLAN_CONTINUE,PREMIUM,PREMIUM_CONTINUE,AUTO_INVEST_PLAN,PREMIUM_RENEWAL', u'createTime': 1563788541000L}
+******2019-07-25 15:21:59,207 - redis client - BackendRedis.py,line 135 - INFO: {u'lastUpdateUser': u'gaozhenjie', u'activityName': u'\u6295\u8d44\u8fd4\u73b0\u6bcf\u65e5\u6392\u884c\u699c', u'activityFlag': 1, u'lastUpdataTime': 1563881442000L, u'activityType': 1, u'id': 464, u'activityId': u'445', u'beginTime': 1563033600000L, u'createUser': u'gaozhenjie', u'lockPeriod': u'12,24,36', u'endTime': 1564588799000L, u'allowBusinessCategory': u'UPLAN,U_NEW,U_PLAN_RENEWAL,U_PLAN_CONTINUE,PREMIUM,PREMIUM_CONTINUE,AUTO_INVEST_PLAN,PREMIUM_RENEWAL', u'createTime': 1563788541000L}
+******2019-07-25 15:21:59,211 - change_activity_begintime - view.py,line 534 - INFO: del-redis finished
+******2019-07-25 15:21:59,211 - change_activity_begintime - view.py,line 534 - INFO: del-redis finished
+******2019-07-25 15:21:59,255 - change_activity_begintime - view.py,line 538 - INFO: 后端时间更新完成
+******2019-07-25 15:21:59,255 - change_activity_begintime - view.py,line 538 - INFO: 后端时间更新完成
+******2019-07-25 15:42:27,948 - change_activity_begintime - view.py,line 523 - INFO: node时间更新完成
+******2019-07-25 15:42:27,948 - change_activity_begintime - view.py,line 523 - INFO: node时间更新完成
+******2019-07-25 15:42:27,948 - change_activity_begintime - view.py,line 523 - INFO: node时间更新完成
+******2019-07-25 15:42:27,948 - change_activity_begintime - view.py,line 523 - INFO: node时间更新完成
+******2019-07-25 15:42:27,950 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-07-25 15:42:27,950 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-07-25 15:42:27,950 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-07-25 15:42:27,950 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-07-25 15:42:27,950 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-07-25 15:42:27,950 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-07-25 15:42:27,950 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-07-25 15:42:27,950 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-07-25 15:42:27,950 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-07-25 15:42:27,950 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-07-25 15:42:27,950 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-07-25 15:42:27,950 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-07-25 15:42:27,956 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-07-25 15:42:27,956 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-07-25 15:42:27,956 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-07-25 15:42:27,956 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-07-25 15:42:27,960 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-07-25 15:42:27,960 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-07-25 15:42:27,960 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-07-25 15:42:27,960 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-07-25 15:42:27,964 - redis client - BackendRedis.py,line 135 - INFO: {u'lastUpdateUser': u'gaozhenjie', u'activityName': u'\u6295\u8d44\u8fd4\u73b0\u6bcf\u65e5\u6392\u884c\u699c', u'activityFlag': 1, u'lastUpdataTime': 1563881442000L, u'activityType': 1, u'id': 464, u'activityId': u'445', u'beginTime': 1564039619000L, u'createUser': u'gaozhenjie', u'lockPeriod': u'12,24,36', u'endTime': 1564588799000L, u'allowBusinessCategory': u'UPLAN,U_NEW,U_PLAN_RENEWAL,U_PLAN_CONTINUE,PREMIUM,PREMIUM_CONTINUE,AUTO_INVEST_PLAN,PREMIUM_RENEWAL', u'createTime': 1563788541000L}
+******2019-07-25 15:42:27,964 - redis client - BackendRedis.py,line 135 - INFO: {u'lastUpdateUser': u'gaozhenjie', u'activityName': u'\u6295\u8d44\u8fd4\u73b0\u6bcf\u65e5\u6392\u884c\u699c', u'activityFlag': 1, u'lastUpdataTime': 1563881442000L, u'activityType': 1, u'id': 464, u'activityId': u'445', u'beginTime': 1564039619000L, u'createUser': u'gaozhenjie', u'lockPeriod': u'12,24,36', u'endTime': 1564588799000L, u'allowBusinessCategory': u'UPLAN,U_NEW,U_PLAN_RENEWAL,U_PLAN_CONTINUE,PREMIUM,PREMIUM_CONTINUE,AUTO_INVEST_PLAN,PREMIUM_RENEWAL', u'createTime': 1563788541000L}
+******2019-07-25 15:42:27,964 - redis client - BackendRedis.py,line 135 - INFO: {u'lastUpdateUser': u'gaozhenjie', u'activityName': u'\u6295\u8d44\u8fd4\u73b0\u6bcf\u65e5\u6392\u884c\u699c', u'activityFlag': 1, u'lastUpdataTime': 1563881442000L, u'activityType': 1, u'id': 464, u'activityId': u'445', u'beginTime': 1564039619000L, u'createUser': u'gaozhenjie', u'lockPeriod': u'12,24,36', u'endTime': 1564588799000L, u'allowBusinessCategory': u'UPLAN,U_NEW,U_PLAN_RENEWAL,U_PLAN_CONTINUE,PREMIUM,PREMIUM_CONTINUE,AUTO_INVEST_PLAN,PREMIUM_RENEWAL', u'createTime': 1563788541000L}
+******2019-07-25 15:42:27,964 - redis client - BackendRedis.py,line 135 - INFO: {u'lastUpdateUser': u'gaozhenjie', u'activityName': u'\u6295\u8d44\u8fd4\u73b0\u6bcf\u65e5\u6392\u884c\u699c', u'activityFlag': 1, u'lastUpdataTime': 1563881442000L, u'activityType': 1, u'id': 464, u'activityId': u'445', u'beginTime': 1564039619000L, u'createUser': u'gaozhenjie', u'lockPeriod': u'12,24,36', u'endTime': 1564588799000L, u'allowBusinessCategory': u'UPLAN,U_NEW,U_PLAN_RENEWAL,U_PLAN_CONTINUE,PREMIUM,PREMIUM_CONTINUE,AUTO_INVEST_PLAN,PREMIUM_RENEWAL', u'createTime': 1563788541000L}
+******2019-07-25 15:42:27,969 - change_activity_begintime - view.py,line 534 - INFO: del-redis finished
+******2019-07-25 15:42:27,969 - change_activity_begintime - view.py,line 534 - INFO: del-redis finished
+******2019-07-25 15:42:27,969 - change_activity_begintime - view.py,line 534 - INFO: del-redis finished
+******2019-07-25 15:42:27,969 - change_activity_begintime - view.py,line 534 - INFO: del-redis finished
+******2019-07-25 15:42:27,977 - change_activity_begintime - view.py,line 538 - INFO: 后端时间更新完成
+******2019-07-25 15:42:27,977 - change_activity_begintime - view.py,line 538 - INFO: 后端时间更新完成
+******2019-07-25 15:42:27,977 - change_activity_begintime - view.py,line 538 - INFO: 后端时间更新完成
+******2019-07-25 15:42:27,977 - change_activity_begintime - view.py,line 538 - INFO: 后端时间更新完成
+******2019-07-25 16:07:30,194 - change_activity_begintime - view.py,line 523 - INFO: node时间更新完成
+******2019-07-25 16:07:30,194 - change_activity_begintime - view.py,line 523 - INFO: node时间更新完成
+******2019-07-25 16:07:30,194 - change_activity_begintime - view.py,line 523 - INFO: node时间更新完成
+******2019-07-25 16:07:30,194 - change_activity_begintime - view.py,line 523 - INFO: node时间更新完成
+******2019-07-25 16:07:30,194 - change_activity_begintime - view.py,line 523 - INFO: node时间更新完成
+******2019-07-25 16:07:30,194 - change_activity_begintime - view.py,line 523 - INFO: node时间更新完成
+******2019-07-25 16:07:30,196 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-07-25 16:07:30,196 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-07-25 16:07:30,196 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-07-25 16:07:30,196 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-07-25 16:07:30,196 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-07-25 16:07:30,196 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-07-25 16:07:30,196 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-07-25 16:07:30,196 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-07-25 16:07:30,196 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-07-25 16:07:30,196 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-07-25 16:07:30,196 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-07-25 16:07:30,196 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-07-25 16:07:30,197 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-07-25 16:07:30,197 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-07-25 16:07:30,197 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-07-25 16:07:30,197 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-07-25 16:07:30,197 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-07-25 16:07:30,197 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-07-25 16:07:30,200 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-07-25 16:07:30,200 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-07-25 16:07:30,200 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-07-25 16:07:30,200 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-07-25 16:07:30,200 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-07-25 16:07:30,200 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-07-25 16:07:30,206 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-07-25 16:07:30,206 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-07-25 16:07:30,206 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-07-25 16:07:30,206 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-07-25 16:07:30,206 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-07-25 16:07:30,206 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_445 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-07-25 16:07:30,209 - redis client - BackendRedis.py,line 135 - INFO: {u'lastUpdateUser': u'gaozhenjie', u'activityName': u'\u6295\u8d44\u8fd4\u73b0\u6bcf\u65e5\u6392\u884c\u699c', u'activityFlag': 1, u'lastUpdataTime': 1563881442000L, u'activityType': 1, u'id': 464, u'activityId': u'445', u'beginTime': 1564040847000L, u'createUser': u'gaozhenjie', u'lockPeriod': u'12,24,36', u'endTime': 1564588799000L, u'allowBusinessCategory': u'UPLAN,U_NEW,U_PLAN_RENEWAL,U_PLAN_CONTINUE,PREMIUM,PREMIUM_CONTINUE,AUTO_INVEST_PLAN,PREMIUM_RENEWAL', u'createTime': 1563788541000L}
+******2019-07-25 16:07:30,209 - redis client - BackendRedis.py,line 135 - INFO: {u'lastUpdateUser': u'gaozhenjie', u'activityName': u'\u6295\u8d44\u8fd4\u73b0\u6bcf\u65e5\u6392\u884c\u699c', u'activityFlag': 1, u'lastUpdataTime': 1563881442000L, u'activityType': 1, u'id': 464, u'activityId': u'445', u'beginTime': 1564040847000L, u'createUser': u'gaozhenjie', u'lockPeriod': u'12,24,36', u'endTime': 1564588799000L, u'allowBusinessCategory': u'UPLAN,U_NEW,U_PLAN_RENEWAL,U_PLAN_CONTINUE,PREMIUM,PREMIUM_CONTINUE,AUTO_INVEST_PLAN,PREMIUM_RENEWAL', u'createTime': 1563788541000L}
+******2019-07-25 16:07:30,209 - redis client - BackendRedis.py,line 135 - INFO: {u'lastUpdateUser': u'gaozhenjie', u'activityName': u'\u6295\u8d44\u8fd4\u73b0\u6bcf\u65e5\u6392\u884c\u699c', u'activityFlag': 1, u'lastUpdataTime': 1563881442000L, u'activityType': 1, u'id': 464, u'activityId': u'445', u'beginTime': 1564040847000L, u'createUser': u'gaozhenjie', u'lockPeriod': u'12,24,36', u'endTime': 1564588799000L, u'allowBusinessCategory': u'UPLAN,U_NEW,U_PLAN_RENEWAL,U_PLAN_CONTINUE,PREMIUM,PREMIUM_CONTINUE,AUTO_INVEST_PLAN,PREMIUM_RENEWAL', u'createTime': 1563788541000L}
+******2019-07-25 16:07:30,209 - redis client - BackendRedis.py,line 135 - INFO: {u'lastUpdateUser': u'gaozhenjie', u'activityName': u'\u6295\u8d44\u8fd4\u73b0\u6bcf\u65e5\u6392\u884c\u699c', u'activityFlag': 1, u'lastUpdataTime': 1563881442000L, u'activityType': 1, u'id': 464, u'activityId': u'445', u'beginTime': 1564040847000L, u'createUser': u'gaozhenjie', u'lockPeriod': u'12,24,36', u'endTime': 1564588799000L, u'allowBusinessCategory': u'UPLAN,U_NEW,U_PLAN_RENEWAL,U_PLAN_CONTINUE,PREMIUM,PREMIUM_CONTINUE,AUTO_INVEST_PLAN,PREMIUM_RENEWAL', u'createTime': 1563788541000L}
+******2019-07-25 16:07:30,209 - redis client - BackendRedis.py,line 135 - INFO: {u'lastUpdateUser': u'gaozhenjie', u'activityName': u'\u6295\u8d44\u8fd4\u73b0\u6bcf\u65e5\u6392\u884c\u699c', u'activityFlag': 1, u'lastUpdataTime': 1563881442000L, u'activityType': 1, u'id': 464, u'activityId': u'445', u'beginTime': 1564040847000L, u'createUser': u'gaozhenjie', u'lockPeriod': u'12,24,36', u'endTime': 1564588799000L, u'allowBusinessCategory': u'UPLAN,U_NEW,U_PLAN_RENEWAL,U_PLAN_CONTINUE,PREMIUM,PREMIUM_CONTINUE,AUTO_INVEST_PLAN,PREMIUM_RENEWAL', u'createTime': 1563788541000L}
+******2019-07-25 16:07:30,209 - redis client - BackendRedis.py,line 135 - INFO: {u'lastUpdateUser': u'gaozhenjie', u'activityName': u'\u6295\u8d44\u8fd4\u73b0\u6bcf\u65e5\u6392\u884c\u699c', u'activityFlag': 1, u'lastUpdataTime': 1563881442000L, u'activityType': 1, u'id': 464, u'activityId': u'445', u'beginTime': 1564040847000L, u'createUser': u'gaozhenjie', u'lockPeriod': u'12,24,36', u'endTime': 1564588799000L, u'allowBusinessCategory': u'UPLAN,U_NEW,U_PLAN_RENEWAL,U_PLAN_CONTINUE,PREMIUM,PREMIUM_CONTINUE,AUTO_INVEST_PLAN,PREMIUM_RENEWAL', u'createTime': 1563788541000L}
+******2019-07-25 16:07:30,214 - change_activity_begintime - view.py,line 534 - INFO: del-redis finished
+******2019-07-25 16:07:30,214 - change_activity_begintime - view.py,line 534 - INFO: del-redis finished
+******2019-07-25 16:07:30,214 - change_activity_begintime - view.py,line 534 - INFO: del-redis finished
+******2019-07-25 16:07:30,214 - change_activity_begintime - view.py,line 534 - INFO: del-redis finished
+******2019-07-25 16:07:30,214 - change_activity_begintime - view.py,line 534 - INFO: del-redis finished
+******2019-07-25 16:07:30,214 - change_activity_begintime - view.py,line 534 - INFO: del-redis finished
+******2019-07-25 16:07:30,223 - change_activity_begintime - view.py,line 538 - INFO: 后端时间更新完成
+******2019-07-25 16:07:30,223 - change_activity_begintime - view.py,line 538 - INFO: 后端时间更新完成
+******2019-07-25 16:07:30,223 - change_activity_begintime - view.py,line 538 - INFO: 后端时间更新完成
+******2019-07-25 16:07:30,223 - change_activity_begintime - view.py,line 538 - INFO: 后端时间更新完成
+******2019-07-25 16:07:30,223 - change_activity_begintime - view.py,line 538 - INFO: 后端时间更新完成
+******2019-07-25 16:07:30,223 - change_activity_begintime - view.py,line 538 - INFO: 后端时间更新完成
+******2019-07-25 19:58:52,239 - change_activity_begintime - view.py,line 538 - INFO: node时间更新完成
+******2019-07-25 19:58:52,239 - change_activity_begintime - view.py,line 538 - INFO: node时间更新完成
+******2019-07-25 19:58:52,239 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-07-25 19:58:52,239 - redis client - BackendRedis.py,line 70 - INFO: 本机IP：10.205.21.26
+******2019-07-25 19:58:52,240 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-07-25 19:58:52,240 - redis client - BackendRedis.py,line 83 - INFO: ******单点连接redis******
+******2019-07-25 19:58:52,240 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-07-25 19:58:52,240 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7000}
+******2019-07-25 19:58:52,243 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-07-25 19:58:52,243 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7001}
+******2019-07-25 19:58:52,246 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-07-25 19:58:52,246 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7002}
+******2019-07-25 19:58:52,249 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7003}
+******2019-07-25 19:58:52,249 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7003}
+******2019-07-25 19:58:52,252 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7004}
+******2019-07-25 19:58:52,252 - redis client - BackendRedis.py,line 129 - INFO: Requesting redis data(date type is STRING): MARKETING-ACTIVITY_ID_KEY_399 from Redis: {'host': '172.16.4.83', 'port': 7004}
+******2019-07-25 19:58:52,255 - redis client - BackendRedis.py,line 135 - INFO: {u'isCurrentMgm': 0, u'activityName': u'20190430\u671fmgm', u'activityFlag': 1, u'lastUpdataTime': 1563884866000L, u'activityType': 2, u'id': 429, u'activityId': u'399', u'beginTime': 1562069311000L, u'createUser': u'tangya01', u'lastUpdateUser': u'gaozhenjie', u'preActivityId': u'393', u'endTime': 1562255999000L, u'createTime': 1556493068000L}
+******2019-07-25 19:58:52,255 - redis client - BackendRedis.py,line 135 - INFO: {u'isCurrentMgm': 0, u'activityName': u'20190430\u671fmgm', u'activityFlag': 1, u'lastUpdataTime': 1563884866000L, u'activityType': 2, u'id': 429, u'activityId': u'399', u'beginTime': 1562069311000L, u'createUser': u'tangya01', u'lastUpdateUser': u'gaozhenjie', u'preActivityId': u'393', u'endTime': 1562255999000L, u'createTime': 1556493068000L}
+******2019-07-25 19:58:52,259 - change_activity_begintime - view.py,line 549 - INFO: del-redis finished
+******2019-07-25 19:58:52,259 - change_activity_begintime - view.py,line 549 - INFO: del-redis finished
+******2019-07-25 19:58:52,312 - change_activity_begintime - view.py,line 553 - INFO: 后端时间更新完成
+******2019-07-25 19:58:52,312 - change_activity_begintime - view.py,line 553 - INFO: 后端时间更新完成

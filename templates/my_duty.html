@@ -2,12 +2,14 @@
 
 {% block body %}
 
+
 <div class="container">
 	<div class="page-header">
 
 		<div class="list-group">
 			<a class="list-group-item active">
-			    <h4 class="list-group-item-heading">Case-list</h4>
+			    <h4 onmouseover="display()" onmouseout="disappear()" class="list-group-item-heading">Case-list</h4>
+                <a  href="#home"   class="caseinfo" style="color: #00CCFF"  id ="caseinfo" name="caseinfo">名下case总数:{{totalcasenum}}</a>
 			</a>
 
 	 	 </div>
@@ -16,9 +18,11 @@
 </div>
 <div class="container">
 	<form class="form-inline">
-	  <div class="form-group">
+	  <!--<div class="form-group">-->
+          <div class="form-group" name="suite">
 	    <label for="exampleInputEmail2">Suite</label>
-	    <select class="form-control" name="suite">
+	    <!--<select class="form-control" name="suite">-->
+          <select class="form-control selectpicker " data-style="btn-info" id="selectpicker" title="--请选择测试集--" data-hide-disabled="true" multiple="multiple" data-actions-box="true" data-live-search="true"  tabindex="-98">
 	    	  {% if category_list %}
 
               {% for category in category_list %}
@@ -26,8 +30,9 @@
               {% endfor %}
             {% endif %}
 		</select>
+              <!--<button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="button" data-id="selectpicker"  aria-expanded="true"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner"></div></div> </div></button>-->
 	  </div>
-	  <button type="submit" class="btn button green" style="min-height: 30px;width: 80px; font-size: 12px " href="{{ url_for ('my_duty') }}">Search</button>
+        <button  type="button" class="btn button green" style="min-height: 30px;width: 80px; font-size: 12px " href="{{ url_for ('my_duty') }}">Search</button>
 	</form>
 	<a class="btn button orange" style="min-height: 20px;width: 60px; font-size: 12px " href="{{ url_for ('add_duty') }}">ADD</a><a class="btn button green" style="min-height: 20px;width: 120px; font-size: 12px "href="{{ url_for ('add_category') }}">Add Suite</a>
 	<button class="btn button pink" style="min-height: 20px;width: 60px; font-size: 12px " id="btn">clickme</button>
@@ -80,7 +85,8 @@
             </ul>
             </nav>
   			<thead>
-  				<th class="active"><input type="checkbox" id="select_all"/>ID</th>
+                <th class="active"><input type="checkbox" id="select_all"></th>
+  				<th class="active">ID</th>
   				<th class="active">Title</th>
   				<th class="active">Suite</th>
   				<th class="active">是否公开</th>
@@ -92,8 +98,8 @@
   				{% if duty_list %}
   				{% for duty in duty_list %}
 				<tr>
-				  <!--<td><input type="checkbox" name="testcase_{{duty.duty_id }}" value="{{ duty.duty_id }}"/></td>-->
-				  <td class="active"><input type="checkbox" name="testcase_{{duty.duty_id }}">{{duty.duty_id}}</td>
+				  <td class="active"><input type="checkbox" name="testcase_{{duty.duty_id }}"></td>
+				  <td class="active">{{duty.duty_id}}</td>
 				  <td class="success">{{duty.title}}</td>
 				  <td class="warning">{{duty.name}}</td>
 				  <td class="danger">{% if duty.is_show == 1 %}是{% else %}否{% endif %}</td>
@@ -116,6 +122,23 @@
 
 </div>
 
+
+
+	<script type="text/javascript">
+	    $('.selectpicker').selectpicker({
+                header: 'Select a condiment',
+                'selectedText': 'cat',
+                'noneSelectedText': '请选择名称',
+                'deselectAllText': '取消全选',
+                'selectAllText': '全选'
+            });
+	    var se = $("#multiple_select");
+	    se.append('<option value="java">JAVA</option>');
+
+	    $(window).on('load', function() {
+		se.selectpicker('refresh');
+	    });
+</script>
 
 
 <!--<script>-->
@@ -168,7 +191,7 @@
 	var duty_id = $(event.target).data("info");
 
      $.ajax({
-         url: 'http://127.0.0.1:5000/case_info_ajax',
+         url: 'http://10.205.21.26:8080/case_info_ajax',
          type: 'POST',
          dataType: 'json',
          data:{'duty_id':duty_id},
@@ -192,16 +215,19 @@
             document.getElementById('update-info').onclick = function(){
 		var parm = JSON.stringify(editor.get()).substring(0); // data to send to server.
 
+
              $.ajax({
-                url: 'http://127.0.0.1:5000/case_info_update_ajax',
+                url: 'http://10.205.21.26:8080/case_info_update_ajax',
                 type: 'POST',
                 data: {'duty_id':duty_id,'parameter':parm},
                 dataType: 'json',
 
                 success: function (res) {
                     // console.log(res);
-					alert("提交成功");
-					window.location.reload();
+                swal("修改成功!", "success", "success");
+                $('#myModal').modal('hide');
+
+                    // window.location.reload();
 
                 },
 
@@ -230,6 +256,14 @@ $("#close, #close_img").bind("click", function() {
 });
 </script>
 
+<script type="text/javascript" language="javascript">
+    function display() {
+        document.getElementById("caseinfo").style.display = "block";
+    }
+    function disappear() {
+        document.getElementById("caseinfo").style.display = "none";
+    }
+</script>
 
 
 <!--<script>-->

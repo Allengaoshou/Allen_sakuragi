@@ -60,8 +60,18 @@ class Duty(db.Model):
     is_show = db.Column(db.Integer, unique=True)
     update_time = db.Column(db.DateTime, unique=True)
 
-    def __init__(self,duty_id, category_id, user_id, parm, return_parm, title, status, is_show, update_time):
-        self.duty_id = duty_id
+    # def __init__(self,duty_id, category_id, user_id, parm, return_parm, title, status, is_show, update_time):
+    #     self.duty_id = duty_id
+    #     self.category_id = category_id
+    #     self.user_id = user_id
+    #     self.parm = parm
+    #     self.return_parm = return_parm
+    #     self.title = title
+    #     self.status = status
+    #     self.is_show = is_show
+    #     self.update_time = update_time
+
+    def __init__(self, category_id, user_id, parm, return_parm, title, status, is_show, update_time):
         self.category_id = category_id
         self.user_id = user_id
         self.parm = parm

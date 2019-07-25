@@ -36,3 +36,4 @@ SQLALCHEMY_BINDS ={
     "plan":"mysql+pymysql://root:yZT0b6m32UDg@172.16.4.82:3306/plan?charset=utf8"
 }
 
+

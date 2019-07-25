@@ -28,7 +28,7 @@ $(function(){
 		$(this).find("dt").height(dl_h);
 	})
 
-	//首页短信、im、语音、视频动画效果
+	//首页动画效果
 	$(".box1 ul li").hover(function(){
 		$(this).find(".unhover").find("i").animate({bottom:-145,opacity: '0'},500);
 		$(this).find(".unhover").find(".txt").animate({left:-125,opacity: '0'},500);
@@ -41,7 +41,7 @@ $(function(){
 		$(this).find(".hover").find(".txt").animate({right:-110},500);
 	})
 
-	//首页“简单”、“可靠”、“专注”、“全球”动画效果
+	//首页动画效果
 	var current = $(".index_2 span.txt.current").index();
 	$(".index_2 span.txt").not(".current").hover(function(){
 		var span_index = $(this).index();
@@ -66,7 +66,7 @@ $(function(){
 		$(this).find("img").attr("src","/front/"+img_name+".png");
 	})
 
-	//语音通知手风琴效果
+	//
 	$(".voice_2 ul li").each(function(){
 		var fold = $(this).find(".fold");
 		var unfold = $(this).find(".unfold");
@@ -132,7 +132,7 @@ $(function(){
 											<a class="btn button {{disabled}} skew " name="UI"  href="{{ url_for ('ui_report') }}" target="_blank" style="min-height: 25px;width: 40%; float: left;overflow: hidden;margin-right: 60px;font-size: 18px">查看报告</a>
 											{% if links_toUI %}
 											{% for link in links_toUI %}
-											<a class="btn button {{disabled}} skew " name="UI" href="https://www.baidu.com" target="_blank" style="min-height: 25px;width: 40%; float: left;overflow: hidden;margin-right: 60px;font-size: 18px">{{link.link_name}}</a>
+											<a class="btn button {{disabled}} skew " name="UI" href="" target="_blank" style="min-height: 25px;width: 40%; float: left;overflow: hidden;margin-right: 60px;font-size: 18px">{{link.link_name}}</a>
 											{% endfor %}
 											{% endif%}
 										</dd>
@@ -148,7 +148,7 @@ $(function(){
 									<dl>
 										<!--<dt><img src="images/img42.png" /></dt>-->
 										<dd>
-											<b>登录注册开户绑卡<a href="...">查看接口文档>></a></b>
+											<b>登录注册开户绑卡<a href="...">查看详情>></a></b>
 										</dd>
 										<dd>用户中心涉及登录注册、开户绑卡、解绑销户之数据构造中心 &nbsp;&nbsp;&nbsp;&nbsp; <a class="btn button orange" name="UI" href="{{ url_for ('addlink') }}" style="min-height: 25px;width: 40px;font-size: 12px;text-align: center;">✚</a></dd>
 										<dd style="margin-top: 10px;overflow: hidden;font-size: 14px">
@@ -171,7 +171,7 @@ $(function(){
 									<dl>
 										<!--<dt><img src="images/img49.png" /></dt>-->
 										<dd>
-											<b>U享优选薪计划<a href="...">查看接口文档>></a></b>
+											<b>U享优选薪计划<a href="...">查看详情>></a></b>
 										</dd>
 										<dd>Plan中心包含优选、老优选、U享、薪享之数据构造中心 </dd>
 											<dd style="margin-top: 10px;overflow: hidden;font-size: 14px">
@@ -193,7 +193,7 @@ $(function(){
 									<dl>
 										<!--<dt><img src="images/img50.png" /></dt>-->
 										<dd>
-											<b>散标债权<a href="...">查看接口文档>></a></b>
+											<b>散标债权<a href="...">查看详情>></a></b>
 										</dd>
 										<dd>标的债权中心：包含散标、债权之数据构造 </dd>
 											<dd style="margin-top: 10px;overflow: hidden;font-size: 14px">
@@ -215,7 +215,7 @@ $(function(){
 									<dl>
 										<!--<dt><img src="images/img51.png" /></dt>-->
 										<dd>
-											<b>充值提现<a href="...">查看接口文档>></a></b>
+											<b>充值提现<a href="...">查看详情>></a></b>
 										</dd>
 										<dd>支付中心对订单主流程的数据的校验快速通道</dd>
 											<dd style="margin-top: 10px;overflow: hidden;font-size: 14px">
@@ -237,7 +237,7 @@ $(function(){
 									<dl>
 										<!--<dt><img src="images/img52.png" /></dt>-->
 										<dd>
-											<b>放款还款<a href="...">查看接口文档>></a></b>
+											<b>放款还款<a href="...">查看详情>></a></b>
 										</dd>
 										<dd>repay中心包含对放款、还款数据的构造及完成基础数据校验流程</dd>
 											<dd style="margin-top: 10px;overflow: hidden;font-size: 14px">
@@ -274,10 +274,9 @@ $(function(){
               <a style ="color: #41683b" href="..." >Node数据服务✪</a>
             </div>
 	  		<div class="card_link" style="width:80%; margin-top: 2px;margin-left: 20px;overflow: hidden;font-size: 12px;">
-				<a class="card_link" href="/marketing_activity" >marketing_activity</a>
+				<a class="card_link" href="/marketing_investcashback" >marketing_investcashback</a>
                 <a class="card_link" href="/marketing_activity_withdraw" >marketing_activity_withdraw</a>
                 <a class="card_link" href="/marketing_activity/change_activity_begintime" >change_activity_begintime</a>
-                <a class="card_link" href="/marketing_activity" >marketing_activity</a>
 			</div>
     </div>
   </nav>
